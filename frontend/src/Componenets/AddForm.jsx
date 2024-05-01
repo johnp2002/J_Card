@@ -14,7 +14,7 @@ const AddForm = ({ onClose, onAdd }) => {
 
   const onSubmit = async (data) => {
     try {
-      const response = await axios.post('http://localhost:4000/cards', data, {
+      const response = await axios.post('https://j-card.onrender.com/cards', data, {
         headers: {
           'Authorization': localStorage.getItem('token')
         }
