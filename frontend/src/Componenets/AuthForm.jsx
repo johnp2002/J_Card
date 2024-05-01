@@ -23,7 +23,7 @@ const submitForm = async (data) => {
     if(isRegister){
         try {
             
-            const res = await axios.post('http://localhost:4000/register',data)
+            const res = await axios.post('https://j-card.onrender.com/register',data)
             console.log(res) 
             toast.success(res.data.message)
         } catch (error) {
@@ -34,7 +34,7 @@ const submitForm = async (data) => {
     }else{
         try {
             
-            const res = await axios.post('http://localhost:4000/login',data)
+            const res = await axios.post('https://j-card.onrender.com/login',data)
             toast.success("Login Successful",{theme:'dark'})
             console.log(res)
             localStorage.setItem('token',res.data.token)

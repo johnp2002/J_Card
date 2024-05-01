@@ -17,7 +17,7 @@ const Home = () => {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await axios.get('http://localhost:4000/cards', {
+        const response = await axios.get('https://j-card.onrender.com/cards', {
           headers: {
             'Authorization': localStorage.getItem('token')
           }

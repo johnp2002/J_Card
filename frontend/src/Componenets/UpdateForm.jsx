@@ -8,7 +8,7 @@ const UpdateForm = ({ card, onClose, onDelete, onUpdate }) => {
 
   const onSubmit = async (data) => {
     try {
-      const response = await axios.put(`http://localhost:4000/cards/${card._id}`, data, {
+      const response = await axios.put(`https://j-card.onrender.com/cards/${card._id}`, data, {
         headers: {
           'Authorization': localStorage.getItem('token')
         }
@@ -23,7 +23,7 @@ const UpdateForm = ({ card, onClose, onDelete, onUpdate }) => {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`http://localhost:4000/cards/${card._id}`, {
+      await axios.delete(`https://j-card.onrender.com/cards/${card._id}`, {
         headers: {
           'Authorization': localStorage.getItem('token')
         }

@@ -6,8 +6,11 @@ const jwt = require('jsonwebtoken');
 const cardController = require('./controllers/cardRoutes');
 const cors = require('cors')
 const app = express();
-
+const path = require('path')
 app.use(cors())
+
+
+// app.use(express.static(path.join(__dirname,'frontend','dist')))
 
 // MongoDB connection
 mongoose.connect('mongodb+srv://john:1234@cluster0.fz5g5rb.mongodb.net/jcard?retryWrites=true&w=majority', {
